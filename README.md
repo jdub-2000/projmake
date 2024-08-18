@@ -61,7 +61,8 @@ foo
 I know, not too imppressive, but its a start and a big timesaver for me :)
 
 
-## About
-
-
 ## Additional Resources
+
+- For help with `Rust/Cargo` installation, consult their very nice guide, [ here](https://www.rust-lang.org/tools/install).
+
+- `Rust` standard [documentation](https://doc.rust-lang.org/std/fs/index.html) for the `fs` Module
