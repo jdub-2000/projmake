@@ -42,6 +42,24 @@ You should now be able to invoke the compiled binary no matter where you "are" i
 
 ## Usage
 
+To make a new project:
+
+```
+projmake foo
+```
+
+This yields a directory with the following structure:
+
+```
+foo
+├── CODE
+├── DAT
+├── DOC
+└── PROD
+```
+
+I know, not too imppressive, but its a start and a big timesaver for me :)
+
 
 ## About
 
