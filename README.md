@@ -1,4 +1,4 @@
-# projmake (WIP)
+# projmake 
  
 A very basic utility to setup predicatble directory patterns
 for starting new projects.  Also, an excuse to learn `Rust`!
