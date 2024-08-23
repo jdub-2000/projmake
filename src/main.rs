@@ -1,43 +1,36 @@
 use std::env;
 use std::fs;
 
+
+fn mk_proj_dir(project_name: &String, sub_dir: &str){
+
+    match fs::create_dir_all(project_name.clone() + sub_dir) {
+        Err(why) => println!("! {:?}", why.kind()),
+        Ok(_) => {},
+    };
+
+}
+
+
 fn main() {
 
     let args: Vec<String> = env::args().collect();
 
-    // first arg is always the path that called the program to execute
-    // println!("My path is {}.", args[0]);
-
     println!("Setting up project directories for project named {:?} . . . ", args[1]);
+    
+    // declare/initialize variables
     let project_name = String::from(args[1].clone());
+    let proj_dirs = ["/CODE", "/DAT", "/DOC", "/PROD"];
+    let mut idx = 0;
 
-    // Create a directory, returns `io::Result<()>`
-    // create root of proj folder
-    match fs::create_dir(project_name.clone()) {
-        Err(why) => println!("! {:?}", why.kind()),
-        Ok(_) => {},
-    };
+    
+    while idx < 4 {
 
-    // subdirs need this different method cuz reasons
-    match fs::create_dir_all(project_name.clone() + "/CODE") {
-        Err(why) => println!("! {:?}", why.kind()),
-        Ok(_) => {},
-    };
+        mk_proj_dir(&project_name, proj_dirs[idx]);
+        idx += 1;
+    }
 
-    match fs::create_dir_all(project_name.clone() + "/DAT") {
-        Err(why) => println!("! {:?}", why.kind()),
-        Ok(_) => {},
-    };
 
-    match fs::create_dir_all(project_name.clone() + "/DOC") {
-        Err(why) => println!("! {:?}", why.kind()),
-        Ok(_) => {},
-    };
-
-    match fs::create_dir_all(project_name.clone() + "/PROD") {
-        Err(why) => println!("! {:?}", why.kind()),
-        Ok(_) => {},
-    };
 
     println!(". . . Finished.");
 }
