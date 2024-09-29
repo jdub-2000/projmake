@@ -59,7 +59,7 @@ foo
 ```
 
 I know, not too imppressive, but its a start and a big timesaver for me :)
-
+I hope to make some new feature available soon!
 
 ## Additional Resources
 
