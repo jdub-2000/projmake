@@ -16,7 +16,7 @@ fn main() {
 
     let args: Vec<String> = env::args().collect();
 
-    println!("Setting up project directories for project named {:?} . . . ", args[1]);
+    println!("Building directories for project named {:?} . . . ", args[1]);
     
     // declare/initialize variables
     let project_name = String::from(args[1].clone());
@@ -24,7 +24,7 @@ fn main() {
     let mut idx = 0;
 
     
-    while idx < 4 {
+    while idx < proj_dirs.len() {
 
         mk_proj_dir(&project_name, proj_dirs[idx]);
         idx += 1;
