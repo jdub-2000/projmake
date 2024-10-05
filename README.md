@@ -16,7 +16,7 @@ git clone git@github.com:jdub-2000/projmake.git &&
 cd projmake
 ```
 
-2. Compile `projmake` using `cargo`
+2. Compile `projmake` using `cargo` ; if you don't have `Rust` or `cargo` installed, see the instructions, [here](https://doc.rust-lang.org/cargo/getting-started/installation.html).
 
 ```
 cargo build --release
