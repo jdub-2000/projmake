@@ -1,5 +1,19 @@
 use std::env;
 use std::fs;
+use std::process::exit;
+
+use serde_derive::Deserialize;
+use toml;
+
+
+struct Data {
+    config: Config,
+}
+
+struct Config {
+    dorp: String,
+    glorp: String,
+}
 
 
 fn mk_proj_dir(project_name: &String, sub_dir: &str){
@@ -20,7 +34,7 @@ fn main() {
     
     // declare/initialize variables
     let project_name = String::from(args[1].clone());
-    let proj_dirs = ["/CODE", "/DAT", "/DOC", "/PROD"];
+    let proj_dirs = ["/CODE", "/DAT", "/DOC", "/PROD", "/MODELS"];
     let mut idx = 0;
 
     
